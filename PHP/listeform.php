@@ -28,7 +28,15 @@
     echo "<table>";
     echo "<tr>";
     echo "<td>".$ligne['idFormation']." - ".$ligne['nomFormation']."-".$ligne['lieuFormation']."-".$ligne['prixFormation']."-".$ligne['dureeFormation']."</td>";
+    
+   // echo "<td><input type=button value='".$ligne['idFormation']."' onclick=Voter()></input></td>";
+   // echo "<td><input type=button value='".$ligne['nomFormation']."' onclick=Voter()></input></td>";
+   // echo "<td><input type=button value='".$ligne['lieuFormation']."' onclick=Voter()></input></td>";
+   // echo "<td><input type=button value='".$ligne['prixFormation']."' onclick=Voter()></input></td>";
+   // echo "<td><input type=button value='".$ligne['dureeFormation']."' onclick=Voter()></input></td>";
     echo "</tr>";
     echo "</table>";
     }
+
+
     ?>

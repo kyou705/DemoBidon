@@ -4,3 +4,24 @@ img
     height:80px;
 }
 
+#offre {
+  background: transparent none repeat scroll 0% 50%;
+  list-style-image: none;
+  text-align: left;
+  font-size: 8em;
+}
+ 
+#offre a {
+  background: #f4ebda none repeat scroll 0% 50%;
+
+  margin-top: 10px;
+  text-decoration: none;
+  display: block;
+  color: #000000;
+  margin-left: 10px;
+}
+//#offre a:link { color: red }       /* lien non-visité */
+#offre a:visited { color: blue }   /* lien visité */
+#offre a:hover { color: yellow }   /* lien survolé */
+#offre a:active { color: lime }    /* lien activé */
+

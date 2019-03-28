@@ -24,13 +24,12 @@
     
 
     echo "<input type='button' value='Inscription' onclick=presence()>";
+    echo "<input type='button' value='Présence' onclick=presence()>";
     
-    echo "<input type='button' value='Présence' >";
-
 
     ?>
-    <div id="divFilms"></div>
-    <div id="divActeurs"></div>
+    <div id="div1"></div>
+    <div id="div2"></div>
     </body>
     </html>
 
