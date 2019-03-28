@@ -24,8 +24,11 @@
 
     foreach($sql->fetchAll(PDO::FETCH_ASSOC) as $ligne)
     {  
-       
-    echo "<p>".$ligne['idFormation']." - ".$ligne['nomFormation']."-".$ligne['lieuFormation']."-".$ligne['prixFormation']."-".$ligne['dureeFormation']."</p>";
     
+    echo "<table>";
+    echo "<tr>";
+    echo "<td>".$ligne['idFormation']." - ".$ligne['nomFormation']."-".$ligne['lieuFormation']."-".$ligne['prixFormation']."-".$ligne['dureeFormation']."</td>";
+    echo "</tr>";
+    echo "</table>";
     }
     ?>

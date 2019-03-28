@@ -1,19 +1,20 @@
-
-function presence()
+var idFormation;
+function presence(a)
 {
 
-    //codeCine=idCine;
-    alert(ifFormation);
+    idFormation=a;
+    //alert(a);
+    
    $.ajax
     (
         {
             type:"get",
             url:"listeform.php",
-            data:"numform="+idFormation,
+            data:"numform=+a",
             success:function(data)
             {
-                $("#divFormation").empty();
-                $("#divFormation").append(data);
+                $("#divFilms").empty();
+                $("#divFilms").append(data);
 
             },
             error:function()
