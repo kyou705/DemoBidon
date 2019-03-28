@@ -1,7 +1,7 @@
 ﻿<?php
 //connexion a la base de données
 // dsn = Data Source Name = driver MYSQL
-$dsn='mysql:dbname=allocine;host=localhost';
+$dsn='mysql:dbname=formation;host=localhost';
 //login
 $login='root';
 // Mot de passe
