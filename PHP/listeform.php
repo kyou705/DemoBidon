@@ -1,7 +1,7 @@
 <?php
     include 'cnx.php';
     
-    $sql = $cnx->prepare("SELECT film.codeFilm,film.nomFilm,film.imageFilm,film.nbVotes,film.totalVotes from film,projeter where film.codeFilm = projeter.numFilm and projeter.numCinema = '".$_GET['numCine']."'");
+   /* $sql = $cnx->prepare("SELECT film.codeFilm,film.nomFilm,film.imageFilm,film.nbVotes,film.totalVotes from film,projeter where film.codeFilm = projeter.numFilm and projeter.numCinema = '".$_GET['numCine']."'");
     $sql->execute();
     echo "Les films";
     foreach($sql->fetchAll(PDO::FETCH_ASSOC) as $ligne)
@@ -17,6 +17,15 @@
     echo "<input type=button value=+3 onclick=Voter(".$ligne['codeFilm'].",3)></input>";
     echo "</p>";
 
-    }
+    }*/
+    include 'cnx.php';
+    $sql= $cnx -> prepare("select idFormation,nomFormation,lieuFormation,prixFormation,dureeFormation from formation");
+    $sql ->execute();
 
+    foreach($sql->fetchAll(PDO::FETCH_ASSOC) as $ligne)
+    {  
+       
+    echo "<p>".$ligne['idFormation']." - ".$ligne['nomFormation']."-".$ligne['lieuFormation']."-".$ligne['prixFormation']."-".$ligne['dureeFormation']."</p>";
+    
+    }
     ?>

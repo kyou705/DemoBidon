@@ -1,70 +1,24 @@
-var codeCine;
 
-function AfficherFilms(idCine)
+function presence()
 {
 
-    codeCine=idCine;
-    //alert(idCine);
-    $.ajax
+    //codeCine=idCine;
+    alert(ifFormation);
+   $.ajax
     (
         {
             type:"get",
-            url:"GetLesFilms.php",
-            data:"numCine="+idCine,
+            url:"listeform.php",
+            data:"numform="+idFormation,
             success:function(data)
             {
-                $("#divFilms").empty();
-                $("#divFilms").append(data);
+                $("#divFormation").empty();
+                $("#divFormation").append(data);
 
             },
             error:function()
             {
-                alert("erreur sql sur les films");
-            }
-        }
-
-    );
-}
-function AfficherLesActeurs(codeFilm)
-{
-    $.ajax
-    (
-        {
-            type:"get",
-            url:"GetLesActeurs.php",
-            data:"numFilm="+codeFilm,
-            success:function(data)
-            {
-                $("#divActeurs").empty();
-                $("#divActeurs").append(data);
-
-            },
-            error:function()
-            {
-                alert("erreur sql sur les acteurs");
-            }
-        }
-
-    );
-}
-
-function Voter(idFilm,vote)
-{
-    //alert(idFilm+ "-" + vote);
-    $.ajax
-    (
-        {
-            type:"get",
-            url:"GetVote.php",
-            data:"numFilm="+idFilm+"&vote="+vote,
-            success:function()
-            {
-                AfficherFilms(codeCine)
-
-            },
-            error:function()
-            {
-                alert("erreur sql sur les votes");
+                alert("erreur sql sur les formations");
             }
         }
 

@@ -12,16 +12,30 @@
 <body>
     <?php
     include 'cnx.php';
-    $sql= $cnx -> prepare("select codeCine,nomCine,imageCine from cinema");
+    $sql= $cnx -> prepare("select idFormation,nomFormation,lieuFormation,prixFormation,dureeFormation from formation");
     $sql ->execute();
 
-    foreach($sql->fetchAll(PDO::FETCH_ASSOC) as $ligne)
+
+
+    echo "Gestion des formations";
+    echo "<br>";
+    echo "<br>";
+
+    
+    echo "<input type='button' value='Inscription'>";
+    
+    echo "<input type='button' value='Présence' >";
+
+    echo "<input type='button' value='test' onclick=presence('".$ligne['idFormation']."')>";
+
+   
+
+  /*  foreach($sql->fetchAll(PDO::FETCH_ASSOC) as $ligne)
     {  
        
-    echo "<p>".$ligne['codeCine']." - ".$ligne['nomCine']."</p>";
-    echo "<img onclick=AfficherFilms('".$ligne['codeCine']."') src=".$ligne['imageCine'].">";
+    echo "<p>".$ligne['idFormation']." - ".$ligne['nomFormation']."-".$ligne['lieuFormation']."-".$ligne['prixFormation']."-".$ligne['dureeFormation']."</p>";
     
-    }  
+    }  */
     ?>
     <div id="divFilms"></div>
     <div id="divActeurs"></div>
